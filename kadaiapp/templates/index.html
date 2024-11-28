@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}思い出{% endblock %}
+{% block home %}#home{% endblock %}
+{% block homes %}#home{% endblock %}
+
+{% block head %}
+        <!-- Masthead-->
+        <header class="masthead">
+            <section class="page-section" id="home">
+
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">思い出を残そう</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </header>
+{% endblock %}
+{% block detail %}
+<!-- detail-->
+<section class="page-section" id="detail">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center mt-0">機能説明</h2>
+        <hr class="divider" />
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">保存</h3>
+                    <p class="text-muted mb-0">思い出のある写真を保存しよう</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">投稿</h3>
+                    <p class="text-muted mb-0">写真を投稿できる</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">投稿日時</h3>
+                    <p class="text-muted mb-0">投稿した日時が分かる</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">あいうえお</h3>
+                    <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section bg-dark text-white">
+    <section class="page-section" id="portfolio">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mb-4">写真を保存しよう</h2>
+        <a class="btn btn-light btn-xl" href="{% url 'kadaiapp:photo_title' %}">保存</a>
+    </div>
+    </section>
+</section>
+{% include "save_list.html" %}
+{% include 'pagination.html' %}
+
+
+{% endblock %}
